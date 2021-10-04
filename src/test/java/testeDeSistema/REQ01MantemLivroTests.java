@@ -63,14 +63,14 @@ public class REQ01MantemLivroTests {
 		driver.findElement(By.id("isbn")).click();
 		driver.findElement(By.id("isbn")).sendKeys("1234");
 		driver.findElement(By.id("autor")).click();
-		driver.findElement(By.id("autor")).sendKeys("Rodrigo Faro");
-		driver.findElement(By.id("titulo")).sendKeys("Vai dar namoro");
+		driver.findElement(By.id("autor")).sendKeys("J. K. Rowling");
+		driver.findElement(By.id("titulo")).sendKeys("Harry Potter");
 		driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 
-		driver.findElement(By.cssSelector("td:nth-child(2)")).click();
+		driver.findElement(By.cssSelector(".btn:nth-child(2)")).click();
 
 		assertTrue(driver.getPageSource().contains("1234"));
-		assertTrue(driver.getPageSource().contains("Rodrigo Faro"));
+		assertTrue(driver.getPageSource().contains("J. K. Rowling"));
 
 		driver.findElement(By.linkText("Excluir")).click();
 	}
@@ -96,7 +96,7 @@ public class REQ01MantemLivroTests {
 		driver.findElement(By.id("isbn")).sendKeys("1234");
 		driver.findElement(By.id("autor")).click();
 		driver.findElement(By.id("autor")).sendKeys("");
-		driver.findElement(By.id("titulo")).sendKeys("Rodrigo Faro");
+		driver.findElement(By.id("titulo")).sendKeys("Harry Potter");
 		driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 	}
 
@@ -121,9 +121,9 @@ public class REQ01MantemLivroTests {
 		driver.findElement(By.id("autor")).click();
 		driver.findElement(By.id("autor"))
 				.sendKeys("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-						+ "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-						+ "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-		driver.findElement(By.id("titulo")).sendKeys("A Origem das Espécies");
+						+ "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
+						+ "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+		driver.findElement(By.id("titulo")).sendKeys("Harry Potter");
 		driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 	}
 
@@ -146,7 +146,7 @@ public class REQ01MantemLivroTests {
 		driver.findElement(By.id("isbn")).click();
 		driver.findElement(By.id("isbn")).sendKeys("1234");
 		driver.findElement(By.id("autor")).click();
-		driver.findElement(By.id("autor")).sendKeys("Rodrigo Faro");
+		driver.findElement(By.id("autor")).sendKeys("J. K. Rowling");
 		driver.findElement(By.id("titulo")).sendKeys("");
 		driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 
@@ -171,14 +171,11 @@ public class REQ01MantemLivroTests {
 		driver.findElement(By.id("isbn")).click();
 		driver.findElement(By.id("isbn")).sendKeys("1234");
 		driver.findElement(By.id("autor")).click();
-		driver.findElement(By.id("autor")).sendKeys("Rodrigo Faro");
+		driver.findElement(By.id("autor")).sendKeys("J. K. Rowling");
 		driver.findElement(By.id("titulo"))
-				.sendKeys("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-						+ "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\"\r\n"
-						+ "				+ \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-						+ "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-						+ "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\"\r\n"
-						+ "				+ \"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				.sendKeys("\"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+						+ "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"+
+						 "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
 		driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 
 	}
@@ -202,8 +199,8 @@ public class REQ01MantemLivroTests {
 		driver.findElement(By.id("isbn")).click();
 		driver.findElement(By.id("isbn")).sendKeys("");
 		driver.findElement(By.id("autor")).click();
-		driver.findElement(By.id("autor")).sendKeys("Rodrigo Faro");
-		driver.findElement(By.id("titulo")).sendKeys("A Origem das Especies");
+		driver.findElement(By.id("autor")).sendKeys("J. K. Rowling");
+		driver.findElement(By.id("titulo")).sendKeys("Harry Potter");
 		driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 
 	}
@@ -225,10 +222,10 @@ public class REQ01MantemLivroTests {
 		espera();
 
 		driver.findElement(By.id("isbn")).click();
-		driver.findElement(By.id("isbn")).sendKeys("11111");
+		driver.findElement(By.id("isbn")).sendKeys("12345");
 		driver.findElement(By.id("autor")).click();
-		driver.findElement(By.id("autor")).sendKeys("Rodrigo Faro");
-		driver.findElement(By.id("titulo")).sendKeys("A Especie das Origens");
+		driver.findElement(By.id("autor")).sendKeys("J. K. Rowling");
+		driver.findElement(By.id("titulo")).sendKeys("Harry Potter");
 		driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 
 	}
@@ -302,13 +299,13 @@ public class REQ01MantemLivroTests {
 			driver.findElement(By.id("isbn")).sendKeys("1236");
 			driver.findElement(By.cssSelector(".row:nth-child(3) > .form-group")).click();
 			driver.findElement(By.id("autor")).click();
-			driver.findElement(By.id("autor")).sendKeys("Rodrigo Faro");
+			driver.findElement(By.id("autor")).sendKeys("J. K. Rowling");
 			driver.findElement(By.id("titulo")).click();
-			driver.findElement(By.id("titulo")).sendKeys("TESTE");
+			driver.findElement(By.id("titulo")).sendKeys("Teste");
 			driver.findElement(By.cssSelector(".btn:nth-child(1)")).click();
 			driver.findElement(By.cssSelector("tr:nth-child(2) .btn-primary")).click();
 			driver.findElement(By.id("titulo")).click();
-			driver.findElement(By.id("titulo")).sendKeys("TESTE 2");
+			driver.findElement(By.id("titulo")).sendKeys("Teste 2");
 			driver.findElement(By.cssSelector(".btn")).click();
 			driver.findElement(By.cssSelector("tr:nth-child(2) > td:nth-child(3)")).click();
 			driver.findElement(By.cssSelector("tr:nth-child(2) .delete")).click();
